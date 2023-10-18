@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Restaurante Virtual</title>
+</head>
+<body>
+    <h1>Orden en el Restaurante Virtual</h1>
+    <div class="contenedor"> 
+        <script src="restaurante.js"></script>
+    </div>
+    <div class="caja">
+        <input type="number" id="cantidad" class="form-control" placeholder="Cantidad"/> <br>
+        <input type="number" id="valor" class="form-control" placeholder="Valor por plato"/> <br>
+        <select class="from-select" aria-label="Default selelct example" id="tipo">
+            <option selected>Tipo de Plato</option>
+            <option value="Entrada">Entrada</option>
+            <option value="Principal">Plato Principal</option>
+            <option value="Postre">Postre</option>
+            <option value="Bebida">Bebida</option>
+        </select>
+        <br>
+        <button onclick="mostrarOrden()" class="btn btn-outline-dark">Realizar Pedido</button>
+        <!-- Mostrar el resultado del pedido -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="respuesta">
+            <strong id="resultado"></strong>
+            <button type="button" class="bth-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</body>
+</html>
